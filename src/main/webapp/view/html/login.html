@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="../css/login.css">
+    <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+
+<div class="card" id="card">
+
+    <div id="loginCard">
+    <form name="lForm" action="#" onsubmit="login()" method="post" target="iframe">
+        <div>
+            <label class="lStyle"><b>LOGIN</b></label>
+        </div>
+        <div class="smallCard">
+            <div>
+                <input type="text" name="lAccount" placeholder="Your Account or Email...">
+            </div>
+        </div>
+        <div class="smallCard">
+            <div class="showBox">
+                <input type="password" class="pwd" id="lPwd" name="lPwd" placeholder="Your Password...">
+                <img style="display: none" class="showPwd" src="../img/close.png" alt="">
+            </div>
+        </div>
+
+        <div>
+            <div class="smallCard">
+                <input type="submit" value="Login">
+            </div>
+            <div>
+            <span>
+                <a href="register.html">register</a> |
+                <span style="color: #0000ee; text-decoration: underline" onclick="switchMenu()">forget ?</span>
+            </span>
+            </div>
+        </div>
+    </form>
+    </div>
+    <iframe id="iframe" name="iframe" style="display:none;"></iframe>
+
+    <div id="retrieveCard" class="retrieveCard">
+        <form name="reForm" onsubmit="retrieve()" target="iframe">
+            <div>
+                <label class="lStyle"><b>retrieve password</b></label>
+            </div>
+            <div class="smallCard">
+
+                <div>
+                    <input type="email" name="reEmail" placeholder="Your Email...">
+                </div>
+            </div>
+            <div class="smallCard">
+                <div class="acquire">
+                    <input style="background-image: url('../img/retrieve.png')" name="reCode" type="text"
+                           placeholder="Verification Code...">
+                    <button type="button" onclick="getVerificationCode()">acquire</button>
+                </div>
+            </div>
+            <div class="smallCard">
+                <div class="showBox">
+                    <input type="password" class="pwd" id="rePwd" name="rePwd" placeholder="Your Password...">
+                    <img style="display: none" class="showPwd" src="../img/close.png" alt="">
+                </div>
+            </div>
+            <div>
+                <div class="smallCard">
+                    <input type="submit" value="Retrieve">
+                </div>
+                <div class="switch">
+
+                    <span style="color: #0000ee; text-decoration: underline" onclick="switchMenuA()">return</span>
+
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
+<script src="../js/login.js"></script>
+</body>
+</html>

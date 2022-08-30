@@ -1,0 +1,295 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("../img/4.jpg");
+    background-size: cover;
+    /*background-color: white;*/
+}
+
+input, select {
+    outline: none;
+}
+
+.all {
+    width: 99%;
+    max-width: 99%;
+    margin: auto;
+}
+
+div.navigate {
+    margin: 0 auto;
+    width: 1600px;
+    max-width: 100%;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+    max-height: 52px;
+}
+
+span.navigate, a.navigate {
+    float: right;
+    color: white;
+    display: block;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+}
+
+span.navigate:hover, a.navigate:hover {
+    background-color: #111111;
+}
+
+@media screen and (max-width: 400px) {
+
+    div.navigate span {
+        display: none;
+    }
+
+    #userName {
+        display: block;
+    }
+}
+
+.mainBody {
+    width: 1200px;
+    margin: 20px auto;
+    background-color: rgba(250, 235, 215, 0.95);
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px rgba(0.5,0.5,0.5,0.1);
+}
+
+
+.top {
+    height: 80px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.top h1 {
+    display: block;
+    margin: 20px auto;
+    padding-top: 30px;
+    font-size: 32px;
+}
+
+.CRD {
+    margin-top: 30px;
+    height: 40px;
+}
+
+.R {
+    display: inline-block;
+}
+
+.CD {
+    float: right;
+    display: inline-block;
+    height: 40px;
+}
+
+.stuTable {
+    min-height: 409px;
+}
+
+.stuTable thead, .stuTable tbody {
+    text-align: center;
+}
+
+.stuTable thead tr {
+    background-color: #ebebeb;
+    height: 40px;
+}
+
+tbody tr td {
+    height: 35px;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: rgb(245, 245, 245);
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgb(250, 250, 250);
+}
+
+/*.mainTbodyTr1 {*/
+/*    height: 30px;*/
+/*    background-color: white;*/
+/*    text-align: center;*/
+/*}*/
+
+/*.mainTbodyTr2 {*/
+/*    height: 30px;*/
+/*    background-color: #eef1f8;*/
+/*    text-align: center;*/
+/*}*/
+tr th:nth-child(1), tr td:nth-child(1) {
+    width: 50px;
+}
+
+tr th:nth-child(2), tr td:nth-child(2) {
+    width: 60px;
+}
+
+tr th:nth-child(5), tr td:nth-child(5) {
+    width: 250px;
+}
+
+tr th:nth-child(3), tr td:nth-child(3) {
+    width: 180px;
+}
+
+tr th:nth-child(6), tr td:nth-child(6) {
+    width: 80px;
+}
+
+tr th:nth-child(4), tr td:nth-child(4) {
+    width: 120px;
+}
+
+tr th:nth-child(7), tr td:nth-child(7), tr th:nth-child(9), tr td:nth-child(9) {
+    width: 80px;
+}
+
+tr th:nth-child(8), tr td:nth-child(8) {
+    width: 120px;
+}
+
+tr th:nth-child(10), tr td:nth-child(10) {
+    width: 160px;
+}
+
+td button, .CD button, .R button {
+    margin: 0 5px;
+    width: 40px;
+    height: 25px;
+}
+
+.foot {
+    margin-top: 15px;
+    height: 40px;
+}
+
+.foot p {
+    display: inline;
+}
+
+.foot input[type=text] {
+    display: none;
+    font-size: 16px;
+    height: 20px;
+    width: 30px;
+}
+
+.foot select {
+    display: none;
+    font-size: 16px;
+    height: 25px;
+    width: 40px;
+}
+
+.foot div {
+    display: inline;
+}
+
+.foot div:nth-child(2) {
+    float: right;
+    margin-right: 10px;
+}
+
+.foot button {
+    height: 30px;
+    margin: 0 5px;
+    width: 60px;
+}
+
+.other {
+    display: none;
+    position: absolute;
+    margin: auto;
+    width: 99%;
+    height: 99%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.card {
+    background-color: antiquewhite;
+    width: 350px;
+    margin: 150px auto;
+    height: 480px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+h2 {
+    padding: 20px 0;
+}
+
+form div p {
+    display: none;
+    font-size: 14px;
+    text-align: left;
+    margin-left: 112px;
+    color: red;
+}
+
+form div:nth-child(even) {
+    height: 20px;
+}
+
+form div label {
+    font-size: 18px;
+    margin-right: 10px;;
+}
+
+form input {
+    height: 22px;
+    font-size: 17px;
+    width: 180px;
+}
+
+.genderBox {
+    text-align: left;
+    margin-left: 55px;
+    font-size: 18px;
+}
+
+.genderBox input {
+    margin: 0 8px 0 15px;
+    height: 100%;
+    width: 13px;
+}
+
+#stuCollegeUp::selection, #stuGenderUp::selection,
+#stuCollegeAp::selection, #stuGenderAp::selection {
+    color: #00000000;
+    background-color: #00000000;
+}
+
+
+#stuCollegeUp, #stuGenderUp,
+#stuCollegeAp, #stuGenderAp {
+    color: #00000000;
+    cursor: default;
+}
+
+.reSet {
+    display: none;
+}
+
+iframe {
+    display: none;
+}
+.card button {
+    margin: 5px 10px 0;
+    width: 50px;
+    border-radius: 5px;
+    height: 30px;
+    border: 1px solid rgba(0,0,0,0.5);
+}

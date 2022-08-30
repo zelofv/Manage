@@ -1,0 +1,173 @@
+body {
+    background-image: url("../img/1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+div.card, div.retrieveCard {
+    perspective: 500px;
+    margin: 12% auto;
+    min-width: 400px;
+    width: 420px;
+    height: 330px;
+    border-radius: 10px;
+    background-color: rgba(242, 242, 242, 0.5);
+    padding: 20px;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(78, 73, 79, 0.5);
+}
+
+div.card div.smallCard {
+    margin: 30px 0;
+}
+
+div.retrieveCard div.smallCard {
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+div.smallCard {
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+div.smallCard:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+label.lStyle {
+    padding: 12px;
+    display: inline-block;
+    font-size: 30px;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+input[type=text], input[type=password], input[type=email] {
+    padding: 12px 20px 12px 40px;
+    width: 70%;
+    border: none;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px 0 rgba(78, 73, 79, 0.5);
+}
+/* 输入框前加入图像 */
+input[type=text] {
+    background-image: url("../img/account.png");
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    background-size: 20px;
+}
+
+#lPwd, #rePwd {
+    background-image: url("../img/password.png");
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    background-size: 20px;
+}
+
+input[type=email] {
+    background-image: url("../img/email.png");
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    background-size: 20px;
+}
+
+input[type=submit], input[type=text],
+input[type=password], input[type=email] {
+    display: inline-block;
+    margin: 0 8%;
+    border-radius: 3px;
+}
+
+input[type=submit] {
+    width: 60%;
+    margin-top: 10px;
+    margin-bottom: -10px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    background-color: #006CAF;
+    box-shadow: 0 4px 8px 0 rgba(78, 73, 79, 0.5);
+}
+
+input[type=text]:focus, input[type=password]:focus,
+input[type=email]:focus {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+input[type=submit]:hover, button[type=button]:hover {
+    background-color: #005CAF;
+    box-shadow: 1px 4px 6px 1px rgba(0, 0, 0, 0.5);
+}
+
+div.acquire {
+    display: inline-block;
+    margin-left: -18px;
+}
+
+div.acquire input[type=text] {
+    background-image: url("../img/password.png");
+    width: 50%;
+    float: left;
+    margin-left: -45px;
+}
+
+div.acquire button {
+    width: 35%;
+    margin-right: -20px;
+    margin-top: 3px;
+    float: right;
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: white;
+    border-radius: 3px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #006CAF;
+    box-shadow: 0 4px 8px 0 rgba(78, 73, 79, 0.5);
+}
+
+div.retrieveCard {
+    display: none;
+    margin-top: -78.9%;
+    margin-left: -4.8%;
+    /*transform: rotateY(180deg);*/
+}
+
+a:visited {
+    color: #0000ee;
+}
+/* 修改 placeholder 文字颜色 */
+input::-webkit-input-placeholder {
+    color: black;
+}
+    /* 动画 */
+@keyframes myFirst {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+    transform: rotateY(360deg);
+    }
+}
+
+@keyframes mySecond {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+    transform: rotateY(360deg);
+    }
+}
+
+.showPwd {
+    position: absolute;
+    width: 20px;
+    transform: translate(140px, -30px);
+}

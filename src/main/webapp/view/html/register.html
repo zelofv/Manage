@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="../css/register.css">
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>
+<div class="card">
+    <a href="login.html" class="back">back</a>
+    <form name="rForm" action="#" onsubmit="register()" method="post" target="iframe">
+        <div>
+            <label class="lStyle"><b>REGISTER</b></label>
+        </div>
+        <div class="smallCard">
+            <div>
+                <input class="yourAccount" name="rAccount" type="text" placeholder="Your Account...">
+            </div>
+        </div>
+        <div class="smallCard">
+            <div>
+                <input class="yourName" name="rName" type="text" placeholder="Your Name...">
+            </div>
+        </div>
+        <div class="smallCard">
+            <div>
+                <input type="email" name="rEmail" placeholder="Your Email...">
+            </div>
+        </div>
+        <div class="smallCard">
+            <div class="showBox">
+                <input type="password" class="pwd" id="rPwd" name="rPwd" placeholder="Your Password...">
+                <img style="display: none" class="showPwd" src="../img/close.png" alt="">
+            </div>
+        </div>
+
+        <div class="smallCard">
+            <div class="showBox">
+                <input type="password" class="pwd" id="rPwdA" name="rPwdA" placeholder="Again...">
+                <img style="display: none" class="showPwd" src="../img/close.png" alt="">
+            </div>
+        </div>
+
+        <div>
+            <div class="smallCard">
+                <input type="submit" value="Register">
+            </div>
+        </div>
+    </form>
+
+    <iframe id="iframe" name="iframe" style="display:none;"></iframe>
+</div>
+<script src="../js/register.js"></script>
+</body>
+</html>

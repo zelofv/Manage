@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <base href="http://localhost:8080/view/html/index.html">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <title>学生管理系统</title>
+</head>
+<body>
+
+<div class="all">
+    <div class="navigate">
+        <a class="navigate" href="" style="float: left">首页</a>
+        <span class="navigate" onclick="cancel()">注销</span>
+        <span class="navigate" onclick="toChange()">修改密码</span>
+        <span class="navigate" onclick="displayName()" id="userName">用户</span>
+        <span class="navigate">欢迎</span>
+    </div>
+
+    <div class="mainBody">
+        <div class="top">
+            <h1 class="headerContent">学生管理系统</h1>
+        </div>
+        <hr/>
+        <div class="CRD">
+            <div class="R">
+                <select id="searchSelect" name="search">
+                    <option value="id">学号</option>
+                    <option value="name">姓名</option>
+                    <option value="college">学院</option>
+                    <option value="gender">性别</option>
+                    <option value="grade">年级</option>
+                    <option value="classNo">班级</option>
+                    <option value="age">年龄</option>
+                </select>
+                <input id="searchInput" type="text">
+                <button id="clearText" onclick="clearText()">清空</button>
+            </div>
+
+            <div class="CD">
+                <button id="add" onclick="addMenu()">新增</button>
+                <button id="del" onclick="delAll()">删除</button>
+            </div>
+        </div>
+
+        <div class="stuTable">
+            <table id="studentsTable">
+                <thead>
+                <tr>
+                    <th class="col1"><input type="checkbox" id="allCheck" onclick="checkAll(this)"/></th>
+                    <th class="col2">序号</th>
+                    <th class="col3">学号</th>
+                    <th class="col4">姓名</th>
+                    <th class="col5">学院</th>
+                    <th class="col6">性别</th>
+                    <th class="col7">年级</th>
+                    <th class="col8">班级</th>
+                    <th class="col9">年龄</th>
+                    <th class="col10">操作</th>
+                </tr>
+                </thead>
+                <tbody id="showStu"></tbody>
+            </table>
+        </div>
+
+        <div class="foot">
+            <div><p>共</p>
+                <p id="stuNum">0</p>
+                <p>条 (每页显示10条)</p></div>
+            <div>
+                <p>第</p>
+                <p id="pageNow">1</p>
+                <input id="pageInput" type="text">
+                <select id="pageSelect">
+                </select>
+                <P>页，共</p>
+                <p id="pages">1</p>
+                <p>页</p>
+                <button id="previous" onclick="pre()">上一页</button>
+                <button id="next" onclick="next()">下一页</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="addStu" class="add other">
+        <div class="card">
+            <div class="Header"><h2>新增学生信息</h2></div>
+            <div id="formMain">
+                <form id="addForm" target="formTarget">
+                    <div><label for="stuIdA">学号: </label><input type="text" id="stuIdA"></div>
+                    <div><p id="stuIdAp">学号为11位数字</p></div>
+                    <div><label for="stuNameA">姓名: </label><input type="text" id="stuNameA"></div>
+                    <div><p id="stuNameAp">请输入中文名</p></div>
+                    <div><label for="stuCollegeA">学院: </label><input type="text" id="stuCollegeA"></div>
+                    <div><p id="stuCollegeAp"> </p></div>
+                    <div class="genderBox"><label for="stuGenderA">性别: </label><input type="radio" name="aGender"
+                                                                                      value="男" id="stuGenderA"
+                                                                                      checked="checked">男<input
+                            type="radio" name="aGender" value="女" id="stuGenderAF">女
+                    </div>
+                    <div><p id="stuGenderAp"> </p></div>
+                    <div><label for="stuGradeA">年级: </label><input type="number" id="stuGradeA" min="1"></div>
+                    <div><p id="stuGradeAp"> </p></div>
+                    <div><label for="stuClassNoA">班级: </label><input type="text" id="stuClassNoA"></div>
+                    <div><p id="stuClassNoAp">班级号为9位数字</p></div>
+                    <div><label for="stuAgeA">年龄: </label><input type="number" id="stuAgeA" min="1"></div>
+                    <div><p id="stuAgeAp">年龄有误</p></div>
+                    <input class="reSet" type="reset">
+                </form>
+            </div>
+
+            <div>
+                <button id="sAdd" onclick="sSubmit()">确认</button>
+                <button id="addCancel" onclick="sCancel()">取消</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="update" class="update other">
+        <div class="card">
+            <div class="Header"><h2>修改学生信息</h2></div>
+            <div class="formMain">
+                <form id="updateForm" target="formTarget">
+                    <div><label for="stuIdU">学号: </label><input type="text" id="stuIdU"></div>
+                    <div><p id="stuIdUp">学号应为11位</p></div>
+                    <div><label for="stuNameU">姓名: </label><input type="text" id="stuNameU"></div>
+                    <div><p id="stuNameUp">请输入中文名</p></div>
+                    <div><label for="stuCollegeU">学院: </label><input type="text" id="stuCollegeU"></div>
+                    <div><p id="stuCollegeUp">占位</p></div>
+                    <div class="genderBox"><label for="stuGenderU">性别: </label><input type="radio" name="uGender"
+                                                                                      value="男" id="stuGenderU">男<input
+                            type="radio" name="uGender" value="女" id="stuGenderUF">女
+                    </div>
+                    <div><p id="stuGenderUp">占位</p></div>
+                    <div><label for="stuGradeU">年级: </label><input type="number" id="stuGradeU" min="1"></div>
+                    <div><p id="stuGradeUp">年级有误</p></div>
+                    <div><label for="stuClassNoU">班级: </label><input type="text" id="stuClassNoU"></div>
+                    <div><p id="stuClassNoUp">班级号应为9位数字</p></div>
+                    <div><label for="stuAgeU">年龄: </label><input type="number" id="stuAgeU" min="1"></div>
+                    <div><p id="stuAgeUp">年龄有误</p></div>
+                    <input class="reSet" type="reset">
+                </form>
+            </div>
+            <div>
+                <button id="preserve" onclick="update()">确认</button>
+
+                <button id="sCancel" onclick="sCancel()">取消</button>
+            </div>
+        </div>
+    </div>
+
+    <iframe id="formTarget"></iframe>
+</div>
+<script type="text/javascript" src="../js/index.js"></script>
+</body>
